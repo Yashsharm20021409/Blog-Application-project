@@ -5,7 +5,7 @@ import "./topbar.css";
 const topbar = () => {
   const user = false;
   return (
-    <div className="top" style={{"margin-top":"8px"}}>
+    <div className="top" style={{"marginTop":"8px"}}>
       <div className="topLeft">
         <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>

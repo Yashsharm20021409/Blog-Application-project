@@ -6,7 +6,10 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const postRoute = require("./routes/post");
 const categoryRoute = require("./routes/category");
+var cors = require('cors')
 
+
+app.use(cors())
 dotenv.config();
 app.use(express.json());
 
