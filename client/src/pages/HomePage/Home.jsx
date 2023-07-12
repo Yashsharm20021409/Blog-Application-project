@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
-  console.log("loc"+search)
+  // console.log("loc"+search)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -26,7 +26,7 @@ const Home = () => {
     <>
       <Header />
       <div className="home">
-        {posts && <Posts posts={posts}/>}
+        {posts && <Posts posts={posts} />}
         <Sidebar />
       </div>
     </>

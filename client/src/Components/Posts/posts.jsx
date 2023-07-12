@@ -3,11 +3,11 @@ import "./posts.css";
 import React from 'react'
 
 export default function Posts({posts}) {
-  // console.log("pos"+posts)
+  // console.log(posts[0]._id)
   return (
     <div className="posts">
       {posts && posts?.map((p)=>(
-        <Post post={p}/>
+        <Post post={p} />
       ))}
     </div>
   );

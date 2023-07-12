@@ -15,7 +15,7 @@ const Sidebar1 = () => {
     getCats();
   }, []);
 
-  console.log(cats);
+  // console.log(cats);
   return (
     <div className="sidebar">
       <div className="sidebarItem">

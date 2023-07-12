@@ -2,28 +2,29 @@ import React from 'react';
 import Topbar from './Components/Topbar/Topbar';
 import Home from './pages/HomePage/Home';
 import Single from './pages/Single/single';
-import Write from './pages/Write/write';
-import Settings from './pages/Settings/settings';
-import Login from './pages/Login/login';
+import Write from './pages/Write/Write';
+import Settings from './pages/Settings/Settings';
+import Login from './pages/Loginpage/Login';
 import Register from './pages/Register/Register';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const currentUser = false;
-  // const currentUser = true;
+  const { user } = useContext(Context);
+  // const user = false;
   return (
     <Router>
-    <Topbar />
-    <Routes>
-      <Route exact path="/" element={<Home />}></Route>
-      <Route path="/posts" element={<Home />}></Route>
-      <Route path="/register" element={currentUser ? <Home /> : <Register />}></Route>
-      <Route path="/login" element={currentUser ? <Home /> : <Login />}></Route>
-      <Route path="/post/:id" element={<Single />}></Route>
-      <Route path="/write" element={currentUser ? <Write /> : <Login />}></Route>
-      <Route path="/settings" element={currentUser ? <Settings /> : <Login />}></Route>
-    </Routes>
-  </Router>
+      <Topbar />
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route path="/register" element={user ? <Home /> : <Register />}></Route>
+        <Route path="/login" element={user ? <Home /> : <Login />}></Route>
+        <Route path="/post/:id" element={<Single />}></Route>
+        <Route path="/write" element={user ? <Write /> : <Login />}></Route>
+        <Route path="/settings" element={user ? <Settings /> : <Login />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
