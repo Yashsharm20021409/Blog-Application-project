@@ -1,7 +1,8 @@
 .top {
   width: 100%;
-  height: 50px;
-  background-color: white;
+  height: 65px;
+  /* background-color: white; */
+  background-color: #b4bbc0;
   position: sticky;
   top: 0;
   display: flex;
@@ -19,8 +20,8 @@
 }
 
 .topRight {
-  justify-content: space-between;
-  flex:3.5;
+  /* justify-content: space-between; */
+  /* flex: 3.5; */
 }
 
 .topIcon {
@@ -58,7 +59,7 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 37px;
+  /* margin-right: 37px; */
   cursor: pointer;
 }
 
@@ -80,10 +81,52 @@
   outline: none;
 }
 
-.topSearchIcon:hover{
+.topSearchIcon:hover {
   color: black;
   background-color: white;
   transition: ease 0.7s;
   /* border: 0px; */
 }
 
+.user {
+  /* margin-right: 50px; */
+  font-size: 21px;
+}
+
+.userDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  /* object-fit: cover; */
+  margin-right: -100px;
+  border: 1px solid black;
+  cursor: pointer;
+  /* background-color: #272727; */
+  color: black;
+  /* margin-bottom: 7px; */
+}
+
+.extra {
+  list-style: none;
+  margin-top: 12px;
+  /* margin-right: 20px; */
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.announcement{
+  height: 30px;
+  background-color: #646e6e;
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;  
+  justify-content: center; 
+  font-size: 14px;
+  font-weight: 500;
+  /* ${mobile({ fontSize:"10px",fontWeight:'500' ,margin:'0px 2px'})} */
+}

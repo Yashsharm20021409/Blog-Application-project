@@ -4,11 +4,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    /* url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); */
+    /* url("https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bG9naW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60") */
+    /* url("https://t3.ftcdn.net/jpg/03/55/60/70/240_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg") */
+    /* ; */ 
+    background-image:url("https://t3.ftcdn.net/jpg/03/55/60/70/240_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
   background-size: cover;
 }
 
@@ -17,9 +21,14 @@
 }
 
 .loginForm {
+  width: 40%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  border: 1px solid #c4c1c1;
+  padding: 44px;
+  border-radius: 11px;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 .loginForm > label {
@@ -27,15 +36,18 @@
 }
 
 .loginInput {
-  padding: 10px;
+  padding: 16px;
   background-color: white;
   border: none;
+  border-radius: 11px;
+  width: 94%;
+  outline: none;
 }
 
 .loginButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: lightcoral;
+  background-color: #788885;
   border: none;
   color: white;
   border-radius: 10px;

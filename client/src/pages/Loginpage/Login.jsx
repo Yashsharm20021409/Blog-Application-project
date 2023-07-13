@@ -47,12 +47,8 @@ const Login = () => {
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
+        <span style={{"marginTop":"16px"}}>Don't have an Account? <Link to="/register" style={{"textDecoration":"none"}}>Register</Link></span>
       </form>
-      <button className="loginRegisterButton">
-        <Link className="link" to="/register">
-          Register
-        </Link>
-      </button>
     </div>
   );
 };

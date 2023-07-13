@@ -30,7 +30,7 @@ const Register = () => {
     <div className="register">
       <span className="registerTitle">Register</span>
       <form className="registerForm" onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label>Username</label> 
         <input
           type="text"
           className="registerInput"
@@ -52,14 +52,10 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="registerButton" type="submit">
-          Register
+          submit
         </button>
+        <span style={{"marginTop":"16px"}}>Already have an Account? <Link to="/login" style={{"textDecoration":"none"}}>Login</Link></span>
       </form>
-      <button className="registerLoginButton">
-        <Link className="link" to="/login">
-          Login
-        </Link>
-      </button>
       {/* error due to same username or email */}
       {error && (
         <span style={{ color: "red", marginTop: "10px" }}>

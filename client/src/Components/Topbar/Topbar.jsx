@@ -13,7 +13,11 @@ const Topbar = () => {
   };
   
   return (
-    <div className="top" style={{"marginTop":"8px"}}>
+    <>
+    <div className="announcement">
+        "Don't be afraid to give up the good to go for the great."
+    </div>
+    <div className="top" >
       <div className="topLeft">
         <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
@@ -31,21 +35,20 @@ const Topbar = () => {
           <li className="topListItem"><Link className="link" to="/">CONTACT</Link></li>
           <li className="topListItem">
             <Link className="link" to="/write">
-              WRITE
+              POST
             </Link>
           </li>
-          <li className="topListItem" onClick={handleLogout}>
-            {user && "LOGOUT"}
-          </li>
+          
         </ul>
       </div>
       <div className="topRight">
-        <div style={{"display":"flex"}}>
-            <div className="searchHover"><i className="topSearchIcon fas fa-search"></i></div>
+        {/* <div style={{"display":"flex"}}>
             <input type="text" placeholder="Search..." className="input" />
-        </div>
+            <div className="searchHover"><i className="topSearchIcon fas fa-search"></i></div>
+        </div> */}
       
         {user ? (
+          <div style={{"display":"flex" , "marginRight":"-100px"}}>
           <Link className="link" to="/settings">
             <img
               className="topImg"
@@ -53,23 +56,24 @@ const Topbar = () => {
               alt=""
             />
           </Link>
+          <ul>
+
+            <li className="extra" onClick={handleLogout}>
+            {user && "Logout"}
+          </li>
+          </ul>
+          </div>
         ) : (
           <ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                LOGIN
-              </Link>
-            </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                REGISTER
-              </Link>
-            </li>
+            <div className="userDiv">
+              <Link className="link" to="/login"><i class="user fa-solid fa-user"></i></Link>
+            </div>
           </ul>
         )}
         
       </div>
     </div>
+    </>
   );
 };
 
