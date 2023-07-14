@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+// import { } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./topbar.css";
 import { Context } from "../../context/Context";
+import { useLocation } from "react-router-dom";
 
 const Topbar = () => {
 
@@ -12,9 +14,10 @@ const Topbar = () => {
     dispatch({ type: "LOGOUT" });
   };
   
+  
   return (
     <>
-    <div className="announcement">
+    <div className="announcement" id="announcement">
         "Don't be afraid to give up the good to go for the great."
     </div>
     <div className="top" >
@@ -27,12 +30,12 @@ const Topbar = () => {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" smooth to="/" >
               HOME
             </Link>
           </li>
-          <li className="topListItem"><Link className="link" to="/">ABOUT</Link></li>
-          <li className="topListItem"><Link className="link" to="/">CONTACT</Link></li>
+          <li className="topListItem"><Link className="link" smooth to='#footer'>ABOUT</Link></li>
+          <li className="topListItem"><Link className="link" smooth to='#footer'>CONTACT</Link></li>
           <li className="topListItem">
             <Link className="link" to="/write">
               POST

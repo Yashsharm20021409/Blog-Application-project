@@ -6,6 +6,7 @@ import Write from './pages/Write/Write';
 import Settings from './pages/Settings/Settings';
 import Login from './pages/Loginpage/Login';
 import Register from './pages/Register/Register';
+import Footer from './Components/footer/Footer';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/post/:id" element={<Single />}></Route>
         <Route path="/write" element={user ? <Write /> : <Login />}></Route>
         <Route path="/settings" element={user ? <Settings /> : <Login />}></Route>
+        <Route path="/footer" element={<Footer />}></Route>
       </Routes>
     </Router>
   );

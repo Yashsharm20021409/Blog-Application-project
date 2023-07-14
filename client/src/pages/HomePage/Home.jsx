@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header/Header";
 import Posts from "../../Components/Posts/posts";
 import Sidebar from "../../Components/sidebar/Sidebar1";
+import Footer from "../../Components/footer/Footer"
 import "./home.css";
 import axios from "axios";
 import {server} from "../../server"
@@ -29,6 +30,7 @@ const Home = () => {
         {posts && <Posts posts={posts} />}
         <Sidebar />
       </div>
+        <Footer />
     </>
   );
 };
