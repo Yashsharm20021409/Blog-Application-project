@@ -181,6 +181,25 @@
     justify-content: center;
     align-items: center;
   }
+  .single {
+    /* display: flex; */
+    flex-direction: column;
+    padding-top: 138px;
+  }
+  .singlePost .singlePostWrapper {
+    padding: 48px;
+    padding-right: 48px;
+  }
+
+  #root .loginInput {
+    width: 88%;
+  }
+  #root .loginForm {
+    width: 61%;
+  }
+  #root .registerForm {
+    width: 61%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -198,7 +217,8 @@
   }
   .img h1 {
     font-size: 1.5rem;
-}
+  }
+  
 }
 
 @media only screen and (max-width: 470px) {

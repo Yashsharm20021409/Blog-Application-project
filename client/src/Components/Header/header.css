@@ -116,7 +116,7 @@ h1 {
   h1 {
     text-align: center;
     text-transform: uppercase;
-    color: #f1faee;
+    /* color: #f1faee; */
     font-size: 2.125rem;
   }
 

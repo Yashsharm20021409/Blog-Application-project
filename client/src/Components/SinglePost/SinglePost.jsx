@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { server } from "../../server";
 import { Context } from "../../context/Context";
+import "../../responsive.css" 
 
 export default function SinglePost() {
   const location = useLocation();
