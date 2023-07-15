@@ -19,11 +19,6 @@
   justify-content: center;
 }
 
-.topRight {
-  /* justify-content: space-between; */
-  /* flex: 3.5; */
-}
-
 .topIcon {
   font-size: 20px;
   margin-right: 10px;
@@ -118,15 +113,23 @@
   cursor: pointer;
 }
 
-.announcement{
+.announcement {
   height: 30px;
   background-color: #646e6e;
   color: white;
   display: flex;
   text-align: center;
-  align-items: center;  
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 500;
   /* ${mobile({ fontSize:"10px",fontWeight:'500' ,margin:'0px 2px'})} */
+}
+
+.hamburger{
+  display: none;
+}
+
+.closeBurger{
+  display: none;
 }

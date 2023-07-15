@@ -4,6 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import "./topbar.css";
 import { Context } from "../../context/Context";
 import { useLocation } from "react-router-dom";
+import "../../responsive.css"
 
 const Topbar = () => {
 
@@ -13,6 +14,13 @@ const Topbar = () => {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
+
+  const handleClick = ()=>{
+    document.getElementById("open").classList.add("topOpen");
+  }
+  const handleClick1 = ()=>{
+    document.getElementById("open").classList.remove("topOpen");
+  }
   
   
   return (
@@ -20,7 +28,8 @@ const Topbar = () => {
     <div className="announcement" id="announcement">
         "Don't be afraid to give up the good to go for the great."
     </div>
-    <div className="top" >
+    <div className="top" id="open">
+    <i class="closeBurger fa-solid fa-xmark" onClick={handleClick1}></i>
       <div className="topLeft">
         <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
@@ -51,7 +60,7 @@ const Topbar = () => {
         </div> */}
       
         {user ? (
-          <div style={{"display":"flex" , "marginRight":"-100px"}}>
+          <div className="profileDiv" style={{"display":"flex" , "marginRight":"-100px"}}>
           <Link className="link" to="/settings">
             <img
               className="topImg"
@@ -59,7 +68,7 @@ const Topbar = () => {
               alt=""
             />
           </Link>
-          <ul>
+          <ul className="mL">
 
             <li className="extra" onClick={handleLogout}>
             {user && "Logout"}
@@ -73,9 +82,11 @@ const Topbar = () => {
             </div>
           </ul>
         )}
-        
       </div>
     </div>
+        <i className="hamburger  fa-solid fa-bars"  onClick={handleClick}></i>
+
+    {/* mobile user */}
     </>
   );
 };

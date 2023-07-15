@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import "../../responsive.css"
 
 const header = () => {
   return (
@@ -19,12 +20,6 @@ const header = () => {
           alt=""
         />
         <div className="text main">
-          {/* <h4>Share Your Thoughts</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Reprehenderit, id. Impedit quasi fugiat qui odit nisi debitis nulla
-            atque eum!
-          </p> */}
           <h1>
             Here You Can Share Your:{" "}
             <div class="roller">
